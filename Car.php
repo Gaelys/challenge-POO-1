@@ -4,6 +4,7 @@ require_once 'Vehicle.php';
 class Car extends Vehicle {
     private string $energy;
     private int $energyLevel;
+    private bool $hasParkBreak;
 
     public const ALLOWED_ENERGIES = [
         'fuel',
@@ -32,5 +33,20 @@ class Car extends Vehicle {
 
     public function setEnergyLevel(int $energyLevel): void {
         $this->energyLevel = $energyLevel;
+    }
+
+    public function getHasParkBreak(): bool {
+        return $this->hasParkBreak;
+    }
+
+    public function setParkBreak(bool $hasParkBreak): void {
+        $this->hasParkBreak = $hasParkBreak;
+    }
+
+    public function start():string {
+        if ($this->getHasParkBreak()) {
+            throw new Exception("frein à main en place");
+        }
+        return "la voiture démarre";
     }
 }

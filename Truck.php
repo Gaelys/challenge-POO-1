@@ -50,4 +50,8 @@ class Truck extends Vehicle {
         }
         return $sentence;
     }
+
+    public function start():string {
+        return "le camion démarre";
+    }
 }

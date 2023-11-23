@@ -77,3 +77,15 @@ $road->addVehicle($maserati);
 var_dump($road);
 $road->addVehicle($bike);
 var_dump($road);
+
+
+$maserati->setParkBreak(true);
+try {
+    $maserati->start();
+} catch (Exception $e) {
+    echo 'Erreur: ' . $e->getMessage() . '<br/>';
+    $maserati->setParkBreak(false);
+    echo "frein à main enlevé, la voiture démarre !<br/>";
+} finally {
+    echo "Ma voiture roule comme un donut!\n";
+}

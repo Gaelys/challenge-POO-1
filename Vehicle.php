@@ -13,6 +13,8 @@ abstract class Vehicle {
         $this->setNbSeats($nbSeats);
     }
 
+    abstract public function start():string;
+
     public function forward(): string
     {
         $this->currentSpeed = 15;
