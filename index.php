@@ -60,3 +60,4 @@ echo $cam->statusStorageCapacity();
 $cam->setLoad(12);
 echo '<br> Chargement du camion : ' . $cam->getLoad() . ' Tonnes<br/>';
 echo $cam->statusStorageCapacity();
+
