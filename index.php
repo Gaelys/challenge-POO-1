@@ -5,6 +5,7 @@ require_once 'Truck.php';
 require_once 'MotorWay.php';
 require_once 'PedestrianWay.php';
 require_once 'ResidentialWay.php';
+require_once 'Skateboard.php';
 
 
 
@@ -71,3 +72,8 @@ $walk = new PedestrianWay();
 var_dump($walk);
 $town = new ResidentialWay();
 var_dump($town);
+
+$road->addVehicle($maserati);
+var_dump($road);
+$road->addVehicle($bike);
+var_dump($road);

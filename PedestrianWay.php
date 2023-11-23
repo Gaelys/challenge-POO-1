@@ -7,4 +7,10 @@ final class PedestrianWay extends HighWay {
     $this->nbLane = 1;
     $this->maxSpeed = 10;
     }
+
+    public function addVehicle(Vehicle $car) {
+        if (($car instanceof Bicycle) || ($car instanceof Skateboard)) {
+            $this->currentVehicles [] = $car;
+        }
+    }
 }

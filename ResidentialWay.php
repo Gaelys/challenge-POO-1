@@ -7,4 +7,8 @@ final class ResidentialWay extends HighWay {
         $this->nbLane = 2;
         $this->maxSpeed = 50;
     }
+
+    public function addVehicle(Vehicle $car) {
+        $this->currentVehicles [] = $car;
+    }
 }

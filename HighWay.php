@@ -35,5 +35,5 @@ abstract class HighWay {
         $this->maxSpeed = $maxSpeed;
     }
 
-        absctract public function addVehicle();
+        abstract public function addVehicle(Vehicle $car);
 }
