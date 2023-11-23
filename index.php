@@ -2,6 +2,10 @@
 require_once 'Bicycle.php';
 require_once 'Car.php';
 require_once 'Truck.php';
+require_once 'MotorWay.php';
+require_once 'PedestrianWay.php';
+require_once 'ResidentialWay.php';
+
 
 
 $bike = new Bicycle("blue", 1);
@@ -61,3 +65,9 @@ $cam->setLoad(12);
 echo '<br> Chargement du camion : ' . $cam->getLoad() . ' Tonnes<br/>';
 echo $cam->statusStorageCapacity();
 
+$road = new MotorWay();
+var_dump($road);
+$walk = new PedestrianWay();
+var_dump($walk);
+$town = new ResidentialWay();
+var_dump($town);
