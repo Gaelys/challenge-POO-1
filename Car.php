@@ -1,7 +1,7 @@
 <?php
 require_once 'Vehicle.php';
 
-class Car extends Vehicle {
+class Car extends Vehicle implements LightableInterface {
     private string $energy;
     private int $energyLevel;
     private bool $hasParkBreak;
@@ -48,5 +48,12 @@ class Car extends Vehicle {
             throw new Exception("frein à main en place");
         }
         return "la voiture démarre";
+    }
+
+    public function switchOn(): bool {
+        return true;
+    }
+    public function switchOff():bool {
+        return false;
     }
 }
